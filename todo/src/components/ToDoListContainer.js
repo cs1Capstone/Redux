@@ -10,5 +10,19 @@ class TodoList extends Component {
     };
   };
 
-  
+  componentDidMount() {
+    const myToDos = JSON.parse(localStorage.getItem('todos'));
+    if (myTodos !== null) {
+      this.props.getTodos(myTodos);
+    }
+  }
+
+
+
+
+
+
+
+
+
 }
